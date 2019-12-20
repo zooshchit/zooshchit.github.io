@@ -1,0 +1,32 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "ru" }}">
+
+  {%- include head.html -%}
+  <body>
+      {% if page.url=='/' %}
+      {%include header.html%}
+      {% else %}
+      {%include heder-page.html%}    
+      {% endif %}
+  
+        {{content}}
+  
+      {%include footer.html%}
+        
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/page.js"></script>
+    <script src="/js/lazyload.js"></script>
+    <script>
+      var lazyLoadInstance = new LazyLoad({
+      elements_selector: ".lazy"
+  });
+    </script>
+    <script src="/js/scrynt.js"></script>
+  </body>
+
+</html>

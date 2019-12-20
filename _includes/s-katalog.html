@@ -1,0 +1,61 @@
+<section class="katalog">
+    <div class="wrap">
+      <h2 class="dog-h2">Животные ищют дом и семью</h2>
+        <div class="s-conteiner" >
+            <div class="s-catalog">
+                <h3>Каталоги по категориям</h3>
+                <a href="/catalog/catalogDog/">Собаки</a>
+                <a href="/catalog/catalogCat/">Кошки</a>
+                <a href="/catalog/heppy/">Их забрали в семью</a>
+              </div>
+            <div class="dog-wrap">
+<!-- ограничиваем число выводимых элементов -->
+              {% if site.dogs.size > 250 %}
+              {% assign delta=site.dogs.size | minus: 250  %}
+              {% endif %}
+
+              {% for dog in site.dogs reversed  limit: 250 offset:delta %}
+
+              <div class="dog-block-wrap">
+                <div class="dog-block">
+                    <img class="lazy dog-img" width="200px" data-src="{{dog.poster.img}}" alt="{{dog.poster.name}}">
+                    <div class="dog-preview">        
+                      <h2 >{{dog.title}}</h2>
+                      <p class="date">{{dog.date | date: "%D"}}</p>
+                      <strong class="dog-cate">Категория:  {{dog.categorie }} {{dog.subcat}}<span>{{ forloop.index }}из{{ forloop.length }}</span></strong>
+                      <p class="dog-text">{{dog.content}}</p>
+                    </div>
+                  </div>
+              </div>
+
+             {% endfor %}
+            <button id="dog-btn">Показать ещё</button>
+            </div>
+
+            <div class="sait-bar">
+              <div class="st-cate">
+                <h3>Каталоги по категориям</h3>
+                <a href="/catalog/catalogDog/">Собаки</a>
+                <a href="/catalog/catalogCat/">Кошки</a>
+                <a href="/catalog/heppy/">Их забрали в семью</a>
+              </div>
+              <div class="st-rekl">
+                <h3>Животным нужна Ваша помощь</h3>
+                <strong class="pom">Корма:</strong>
+                <p>Сухие корма, консервированные корма, каши.</p>
+                <strong class="pom">Лекарства:</strong>
+                <p>Иньекции , таблетки , мази , одноразовые шприцы № 2-20мл , одноразовые перчатки , бинты , катетеры , антисептик .</p>
+                <strong class="pom">Финансы:</strong>
+                <p>Денежные пожертвования на расчетный счёт или банковскую карту , под отчёт.</p>
+                <strong class="pom">Хозяйство:</strong>
+                <p>Строительные матерьялы , подстилки в вольеры , бытовая химия .</p>
+                <strong class="pom">Волонтёры</strong>
+                <p>Приходите и присоденяйтесь к нам ,Вы можете пообщаться с подопечными , выбрать себе друга или друзей и помочь им своей заботой и вниманием. Ваша помощь необходима , ждём Вас.
+                </p>
+              </div>
+            </div>
+        </div>
+
+    </div>  <a name="dnev"></a>
+  </div>
+</section><div class="hr"></div>

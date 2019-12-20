@@ -1,0 +1,19 @@
+
+  <nav class="{{include.class}}">
+    <ul >
+        {% for itemM in site.menuMob %}
+        <li class="{% if  page.url == {{itemM.url}} %} active {% endif %}" id="{{itemM.id}}">
+          <a href="{{itemM.url}}">{{itemM.name}}</a>
+        </li>
+           {% if itemM.submenuMob %}
+              <ul class="submenuMob">
+                  {% for subitemM in itemM.submenuMob %}
+                  <li><a href="{{subitemM.url}}" text="{{subitemM.a}}">{{subitemM
+                    .name}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+           {% endif %}
+        {% endfor %}
+    </ul>
+  </nav>

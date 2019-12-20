@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.mailOk-wrap{
+  position: relative;
+  background-repeat:  no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index:1;
+}
+.ok{
+  position: absolute;
+  width: 300px;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -15%;
+  text-align: center;
+  color:#feffde;
+}
+.mailOk-wrap::before{
+  content : "";
+ position : absolute ;
+ top : 0;
+ left : 0;
+ right: 0;
+ bottom: 0;
+background-color : rgba(0, 0, 0, 0.3);;
+}
+.ok p{
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.ok a{
+  font-weight: bold;
+  font-size: 30px;
+  color:#feffc6;
+  transition: all 0.3 ease;
+}
+.ok a:hover{
+  color:#80ff80;
+}
+
+
+
+
+
+
+
+

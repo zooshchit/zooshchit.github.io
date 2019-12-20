@@ -1,0 +1,105 @@
+
+menu : 
+    - url: '/'
+      name: главная
+      id: glav
+      submenu : 
+      - url: /#kotalog
+        name : каталог животных
+        a : kotalog
+      - url: /#dnev
+        name : дневник событий
+        a : dnev
+      - url: /#contact
+        name : контакты
+        a : contact
+    - url: '#'
+      name: Про нас
+      id: about
+      submenu2 :
+      - url: '/pages/about/'
+        name : наши цели
+      - url: /pages/komanda/
+        name : наша команда
+      - url: '/pages/partners/'
+        name: наши партнёры
+      - url: '/pages/smi/'
+        name: СМИ о нас 
+    - url: '#'
+      name: Полезная информация
+      id: info
+      submenu3 :
+      - url: '/pages/homeDog/'
+        name:  как взять собаку
+      - url: '/pages/sos/'
+        name: спасти животное после ДТП
+      - url: '/pages/dok/'
+        name: ветклиники
+      - url: '/pages/zoopriut/'
+        name: зоозащитные организации, приюты
+      - url: '/pages/help/'
+        name: список ресурсов для обьявлений пропажи или находки
+      - url: '/pages/zakon/'
+        name: законы
+      - url: '/pages/proshanie/'
+        name: смерть питомца
+    - url: '/pages/messedg/'
+      name: обратная связь
+      id: messedg
+
+menuMob : 
+      - url: '/'
+        name: главная
+        submenuMob :
+        - url: /#kotalog
+          name : каталог животных
+          a : kotalog
+        - url: /#dnev
+          name : дневник событий
+          a : dnev
+        - url: /#contact
+          name : контакты
+          a : contact
+      - url: '#'
+        name: Про нас
+        submenuMob :
+        - url: '/pages/about/'
+          name : наши цели
+        - url: '/pages/komanda/'
+          name : наша команда
+        - url: '/pages/partners/'
+          name: наши партнёры
+        - url: '/pages/smi/'
+          name: СМИ о нас
+      - url: '#'
+        name: Полезная информация
+        submenuMob :
+        - url: '/pages/homeDog/'
+          name: как взять собаку
+        - url: '/pages/sos/'
+          name: спасти животное после ДТП
+        - url: '/pages/dok/'
+          name: ветклиники
+        - url: '/pages/zoopriut/'
+          name: зоозащитные организации, приюты
+        - url: '/pages/help/'
+          name: список ресурсов для обьявлений пропажи или находки
+        - url: '/pages/zakon/'
+          name: законы
+      - url: '/pages/messedg/'
+        name: обратная связь
+
+
+title: ЗООЩИТ.
+description: Некоммерческое ощественное обьеденение для помощи бездомным животным на территории г.Каменское.
+
+
+collections:
+  posts:
+      output: true
+      permalink: /:title/
+  dogs:
+  heppy:
+
+sass:
+    style: :compressed

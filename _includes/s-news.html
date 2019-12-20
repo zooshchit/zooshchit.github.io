@@ -1,0 +1,21 @@
+<section class="katalog">
+    <div class="wrap" id="container">
+        <h2 class="dog-h2">дневник событий</h2>
+        <ul id="items">
+<!-- ограничиваем число выводимых элементов -->
+            <!-- {% if site.posts.size > 10 %}
+            {% assign delta2 = site.posts.size | minus:10  %}
+            {% endif %} -->
+            {% for post in site.posts limit:10 %}
+            <li class="post">
+              <a href="{{post.url}}"><img class="dog-img jmg-news" width="200px" src="{{post.poster.img}}" alt="{{post.poster.name}}"></a>
+                <div class="post-preview">        
+                  <h3 class="blog-h2"><a href="{{post.url}}">{{post.title}}</a></h3>
+                <p class="date">{{post.date | date: "%D"}}</p>
+                  <p class="info">{{post.excerpt|truncatewords(200)}}</p>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+</section>

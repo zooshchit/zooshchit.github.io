@@ -1,0 +1,158 @@
+.s-page{
+  display: flex;
+  flex-grow : 1 ; 
+  & h2{
+    padding-bottom: 20px;
+}
+}
+.page-wrap{
+  width: 60%;
+  margin: 0 auto;
+  padding: 40px 0 60px ;
+  & ul{
+    list-style-type : none;
+    & li{
+      padding-bottom: 10px;
+      & img{
+        transform: translateY(5px);
+        margin-right: 15px;
+      }
+      & address{
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+//   page-komanda
+.kom{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 220px auto;
+
+}
+.page-wrap p{
+  text-indent : 30px;
+  line-height: 1.4;
+}
+.p-kom{
+  width: 100%;
+  margin-left: 20px;
+  padding-top: 20px;
+  align-self: end;
+  & h3{
+    text-align: right;   
+  }
+}
+#img-kom{
+height: 200px;
+margin: 15px 0 ;
+object-fit : cover;
+border:3px solid #fff;
+border-radius:15%;
+box-shadow:0 5px 10px #bbb;
+}
+//    page-mesendger
+@mixin form {
+  outline: none;
+  color: $col-font;
+  background-color: $col-fon;
+  border: $col-more 3px solid;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px 0 15px;
+  &:focus{
+    background-color:$col-w ;
+    box-shadow: #bbb 0 0 10px ;
+  }
+}
+
+#formaction{
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 20px 0  0; 
+  text-align: center; 
+  & textarea{
+    width: 70%;
+    @include form;
+    font-size: 24px;
+    margin: 15px auto;
+  }
+  & button{
+    @include btn;
+    margin: 20px 0 10px;
+  }
+}
+.form-name{
+  position: relative;
+  display:grid;
+  width: 70%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  & input {
+    width: 100%;
+    @include form;
+    font-size: 18px;
+    margin: 0px; 
+  }
+}
+#stok{
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  font-size: 12px;
+}
+//    page-sos
+.s-sos{
+  width: 100%;
+  height: auto;
+  & h3{
+    text-align: center;
+    padding-bottom: 20px;
+}}
+.i-sos{
+  width: 300px;
+  margin: 20px auto;
+}
+#a-sos{
+  text-align: right;
+  padding: 40px 0;
+}
+//    page homeDog
+i{
+  color: $col-more;;
+}
+
+@media only screen and (max-width:992px) {
+  .page-wrap{
+    width: 80%;
+  }
+  #formaction textarea{
+    width: 80%;
+  }
+  .form-name{
+    width: 80%;
+  }
+}
+@media only screen and (max-width:600px) {
+  .kom{
+    grid-template-columns:1fr;
+    grid-template-rows:220px auto;
+  }
+  .form-name{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+  .page-wrap{
+    width: 90%;
+  }
+  #formaction textarea{
+    width: 100%;
+  }
+  .form-name{
+    width: 100%;
+  }
+}

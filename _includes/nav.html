@@ -1,0 +1,37 @@
+
+  <nav class="{{include.class}}">
+    <ul >
+        {% for item in site.menu %}
+        <li class="{% if  page.url == {{item.url}} %} active {% endif %}" id="{{item.id}}">
+          <a href="{{item.url}}">{{item.name}}</a>
+        </li>
+           {% if item.submenu %}
+              <ul class="submenu">
+                  {% for subitem in item.submenu %}
+                  <li><a href="{{subitem.url}}" text="{{subitem.a}}">{{subitem
+                    .name}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+           {% endif %}
+           {% if item.submenu2 %}
+              <ul class="submenu2">
+                  {% for subitem2 in item.submenu2 %}
+                  <li><a href="{{subitem2.url}}" text="{{subitem2.a}}">{{subitem2
+                    .name}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+           {% endif %}
+           {% if item.submenu3 %}
+              <ul class="submenu3">
+                  {% for subitem3 in item.submenu3 %}
+                  <li><a href="{{subitem3.url}}" text="{{subitem3.a}}">{{subitem3
+                    .name}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+           {% endif %}
+        {% endfor %}
+    </ul>
+  </nav>

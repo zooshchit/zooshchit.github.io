@@ -1,0 +1,71 @@
+
+/* content */
+
+#container{	
+  position:relative;
+  padding:2em 0;
+  }
+  
+ul#items{
+  width: 100%;
+  text-align: center;
+  margin:0 auto;
+  width:auto;
+  display:flex;
+  }
+ul#items li{
+  list-style:none;
+  height:auto;
+  min-width: 260px;
+  max-height: 400px;
+  padding: 0 10px 15px 10px;
+  margin:0 7px;
+  background-color:$col-fon2;
+  color:#fff;
+  text-align:center;
+  border-radius:5px;
+  box-shadow:0 1px 1px #777,  0 5px 10px #ddd;
+  color:#555;
+  }
+ul#items li:hover{color:#333;}
+ul#items li .jmg-news{
+  margin:20px auto;
+  width:220px;
+  height:170px;
+  }	
+ul#items h3{
+  text-transform:uppercase;
+  font-size:18px;
+  font-weight:bold;
+  margin:.25em 0;
+  text-shadow:#fff 0 1px 0;}	
+ul#items .info{
+  color:#999;
+}
+ol#pagination{
+  position:relative;
+  margin-top: 20px;
+  text-align:center;
+  color: #000;
+}
+ol#pagination li{
+  display:inline-block;
+  width:20px;
+  height:20px;
+  text-align:center;
+  list-style:none;
+  cursor:pointer;
+  margin:0 3px;
+  transition: all .5s ease ;
+  }
+ol#pagination li:hover{
+  background-color: $col-grin;}
+ol#pagination li.current{
+  color:#Fff;
+  font-weight:bold;
+  background-color: $col-more;}
+ol#pagination li.prev{
+  font-size: 16px;}
+ol#pagination li.next{
+  font-size: 16px;}
+

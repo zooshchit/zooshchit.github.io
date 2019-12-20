@@ -1,0 +1,143 @@
+.katalog{
+  padding: 30px 0;
+  color:$col-font;
+}
+.dog-wrap{
+  width: 80%;
+}
+.dog-block-wrap,.s-catalog{ 
+  display: none;
+}
+.dog-block{
+  width: 100%; 
+  height: auto;
+  margin-bottom: 20px;;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows:auto;
+  column-gap: 20px;
+  background-color: $col-fon2 ;
+  box-shadow:0 1px 1px #777, 0 5px 10px #ddd ;
+  border-radius:5px;
+}
+.dog-img{
+  object-fit : cover;
+  width:300px;
+  height:200px;
+  border:2px solid #fff;
+  box-shadow:0 1px 1px #bbb;
+} 
+.dog-h2{
+  font-weight:bold;
+  color:#666666;
+}
+.dog-preview{
+  width: 100%;
+}
+.dog-cate{
+  display: grid;
+    width: 100%;
+    color: #757575;
+    grid-template-rows:1fr;
+    grid-template-columns: auto auto;
+    & span{
+    justify-self: end;;
+}}
+.dog-text{
+  padding-top: 15px;
+}
+#dog-btn{
+  display: grid;
+  margin: 30px auto;
+  @include btn;
+  justify-self:center;
+
+}
+
+
+.sait-bar{
+  width: 20%;
+  margin-left: 20px;
+  color: #757575;
+}
+.st-cate ,.st-rekl {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 15px 10px;
+  background-color: $col-fon2;
+  box-shadow:0 1px 1px #888, 0 5px 10px #ddd ;
+  border-radius:5px;
+  & a{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+.st-rekl{
+  background-color: $col-fon2 ;
+}
+
+//   dog-heppy
+#dog-heppy{
+  width: 100%;
+}
+
+@media only screen and (max-width:992px) {
+  .s-conteiner{
+  flex-wrap :wrap;
+    flex-grow : 1;
+    justify-content : center;
+  } 
+  .s-catalog{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px 10px;
+    background-color: $col-fon2 ;
+    box-shadow:0 1px 1px #888, 0 5px 10px #ddd ;
+    & a{
+      font-size: 20px;
+      padding: 10px;
+    }
+  }
+  .dog-wrap{
+    width: 100%;
+  }
+  .dog-img{
+    margin-top: 15px;
+  }
+  .dog-text{
+    padding-top: 10px;
+  }
+  .exp{
+    padding: 0 15px;
+  }
+  .sait-bar{
+    display: none;
+  }
+}
+@media only screen and (max-width:745px) {
+  .dog-block{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    & .dog-img{
+      justify-self: center;
+      margin-bottom: 20px;
+    }
+  }
+  #dog-btn{
+    display:grid;
+  }
+}
+@media only screen and (max-width:360px) {
+  .dog-img{
+    width: 250px;
+  }
+  
+  #dog-btn{
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Мероприятие-8 
+# description: Женский берет + бактус. Размер 56-58.
+poster:
+   img: /assets/img-news/news2.jpg
+   name: берет
+date: 2019-10-08 10:00 +0200
+---
+<p class="exp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad qui, aperiam nulla quae maiores, necessitatibus fugit quasi tenetur ab quod eaque soluta et facere provident, voluptas perspiciatis quibusdam. Eligendi, voluptas?</p>
