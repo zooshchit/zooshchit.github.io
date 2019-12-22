@@ -1,0 +1,58 @@
+---
+layout: default
+permalink: /catalog/catalogDog3/
+---
+
+<section class="katalog">
+  <div class="btn-up">&#9650;</div>
+  <div class="wrap">
+      <h2 class="dog-h2">Щенки ищют дом и семью</h2>
+        <div class="s-conteiner" >
+            <div class="dog-wrap">
+              {% for dog in site.dogs %}
+
+              {% if dog.categorie contains "собаки" %} 
+              
+              {% if dog.subcat contains 'щенок' %}
+                <div class="dog-block">
+                    <img class="lazy dog-img" width="200px" data-src="{{dog.poster.img}}" alt="{{dog.poster.name}}">
+                    <div class="dog-preview">        
+                      <h2 class="dog-h2">{{dog.title}}</h2>
+                      <p class="date">{{dog.date | date: "%D"}}</p>
+                      <h3 class="dog-cate">Категория:  {{dog.categorie }} {{dog.subcat}}</h3>
+                      <p class="dog-text">{{dog.content}}</p>
+                    </div>
+                </div>
+                {% endif%}
+                {% endif%}
+             {% endfor %}
+            <!-- <button id="dog-btn">Показать ещё</button> -->
+            </div>
+
+            <div class="sait-bar">
+              <div class="st-cate">
+                <h3>Каталоги по категориям</h3>
+                <a href="/catalog/catalogDog1/">породистые</a>
+                <a href="/catalog/catalogDog2/">метисы</a>
+                <a href="/catalog/catalogDog3/">щенки</a>
+              </div>
+              <div class="st-rekl">
+                <h3>Животным нужна Ваша помощь</h3>
+                <strong class="pom">Корма:</strong>
+                <p>Сухие корма, консервированные корма, каши.</p>
+                <strong class="pom">Лекарства:</strong>
+                <p>Иньекции , таблетки , мази , одноразовые шприцы № 2-20мл , одноразовые перчатки , бинты , катетеры , антисептик .</p>
+                <strong class="pom">Финансы:</strong>
+                <p>Денежные пожертвования на расчетный счёт или банковскую карту , под отчёт.</p>
+                <strong class="pom">Хозяйство:</strong>
+                <p>Строительные матерьялы , подстилки в вольеры , бытовая химия .</p>
+                <strong class="pom">Волонтёры</strong>
+                <p>Приходите и присоденяйтесь к нам ,Вы можете пообщаться с подопечными , выбрать себе друга или друзей и помочь им своей заботой и вниманием. Ваша помощь необходима , ждём Вас.
+                </p>
+              </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</section>

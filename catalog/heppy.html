@@ -1,0 +1,31 @@
+---
+layout: default
+permalink: /catalog/heppy/
+---
+
+<section class="katalog">
+  <div class="btn-up">&#9650;</div>
+  <div class="wrap">
+      <h2 class="dog-h2">Животные нашедшие дом и семью</h2>
+        <div class="s-conteiner" >
+            <div class="dog-wrap" id="dog-heppy">
+
+              {% for dog1 in site.heppy reversed %}
+              
+                <div class="dog-block">
+                    <img class="lazy dog-img" width="200px" data-src="{{dog1.poster.img}}" alt="{{dog1.poster.name}}">
+                    <div class="dog-preview">        
+                      <h2 class="dog-h2">{{dog1.title}}</h2>
+                      <p class="date">{{dog1.date | date: "%D"}}</p>
+                      <h3 class="dog-cate">Категория:  {{dog1.categorie }} {{dog1.subcat}}</h3>
+                      <p class="dog-text">{{dog1.content}}</p>
+                    </div>
+                </div>
+             {% endfor %}
+            <!-- <button id="dog-btn">Показать ещё</button> -->
+            </div>
+       </div>
+
+    </div>
+  </div>
+</section>

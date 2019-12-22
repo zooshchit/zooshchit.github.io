@@ -1,0 +1,16 @@
+---
+layout: page
+title: обратная связь
+permalink: /pages/messedg/
+---
+<p>Если у вас есть вопросы, если вам понравилась собака и вы хотите знать о ней больше, напишите нам через форму обратной связи: </p>
+<form method="POST" id="formaction">
+  <div class="form-name">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="_replyto" placeholder="Ваш e-mail" required>
+  </div>
+  <input type="text" name="_gotcha" style="display:none" />
+  <input type="hidden" name="_next" value="//klubok.dp.ua/mailOk.html" />
+    <textarea name="mail" placeholder=" Ваше сообщение" rows=5 required></textarea>
+    <button class="btn-mail" type="submit" value="Send">отправить сообщение</button>
+</form>
