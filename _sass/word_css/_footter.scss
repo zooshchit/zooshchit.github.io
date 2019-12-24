@@ -1,0 +1,85 @@
+.footer{
+  width: 100%;
+  height: 350px;
+  background: url(/assets/img/fonTop.png ) repeat center ;
+  & .cont-footer{
+    width: 100%;
+    min-height: 350px;
+    padding:  30px 0 60px;
+    padding-bottom: 60px;
+    background-color:#e3e2e7;
+    opacity: .95;
+  }
+}
+.foot-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 30px;
+}
+.l-f{
+  text-shadow:#fff 0 1px 0;
+}
+#facebook{
+  width: 20px;
+  height: 20px;
+  background-color:$col-more;
+  text-align: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:745px) {
+  .footer{
+    height: 450px;
+    & .cont-footer{
+      height: 450px;
+    }}
+  .foot-grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+  }
+  .soch{
+    grid-column: 1/3;
+  }
+}
+
+@media only screen and (max-width:625px) {
+  .footer{
+    height: 650px;
+    & .cont-footer{
+      height: 650px;
+    }}
+  .foot-grid{
+    padding-left: 10%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .soch{
+    padding-top:20px;
+    grid-column: 1/2;
+  }
+}
+@media only screen and (max-width:460px) {
+  .footer{
+    height: 700px;
+    & .cont-footer{
+      height: 700px;
+    }}
+}
+@media only screen and (max-width:360px) {
+  .footer{
+    height: 760px;
+    & .cont-footer{
+      height: 760px;
+    }}
+}
+@media only screen and (max-width:300px) {
+  .footer{
+    height: 820px;
+    & .cont-footer{
+      height: 820px;
+    }}
+}
